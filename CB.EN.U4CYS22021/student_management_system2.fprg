@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ADMIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:17:07 AM"/>
+        <attribute name="created" value="QURNSU47REVTS1RPUC04NjcwQ09HOzIwMjItMTAtMjg7MDk6MjQ6MDQgQU07MjYzOQ=="/>
+        <attribute name="edited" value="QURNSU47REVTS1RPUC04NjcwQ09HOzIwMjItMTAtMjg7MTA6MTc6MDcgQU07MzsyNzQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="getting inputs for students management system"/>
+            <declare name="rollno" type="Integer" array="False" size=""/>
+            <input variable="rollno"/>
+            <declare name="name" type="String" array="False" size=""/>
+            <input variable="name"/>
+            <declare name="address" type="String" array="False" size=""/>
+            <input variable="address"/>
+            <declare name="bloodgroup" type="String" array="False" size=""/>
+            <input variable="bloodgroup"/>
+            <declare name="phonenumber" type="Integer" array="False" size=""/>
+            <input variable="phonenumber"/>
+            <declare name="department" type="String" array="False" size=""/>
+            <input variable="department"/>
+            <declare name="semester" type="Integer" array="False" size=""/>
+            <input variable="semester"/>
+            <declare name="subjectcode1, subjectcode2, subjectcode3" type="String" array="False" size=""/>
+            <declare name="mark1, mark2, mark3" type="Real" array="False" size=""/>
+            <input variable="subjectcode1"/>
+            <input variable="mark1"/>
+            <input variable="subjectcode2"/>
+            <input variable="mark2"/>
+            <input variable="subjectcode3"/>
+            <input variable="mark3"/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <assign variable="total" expression="mark1+mark2+mark3"/>
+            <assign variable="avg" expression="total/3"/>
+            <output expression="&quot;student management system&quot;" newline="True"/>
+            <output expression="rollno" newline="True"/>
+            <output expression="name" newline="True"/>
+            <output expression="address" newline="True"/>
+            <output expression="bloodgroup" newline="True"/>
+            <output expression="phonenumber" newline="True"/>
+            <output expression="department" newline="True"/>
+            <output expression="&quot;semester&quot; &amp;semester" newline="True"/>
+            <output expression="&quot;total=&quot; &amp;total" newline="True"/>
+            <output expression="&quot;avg=&quot; &amp;avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
