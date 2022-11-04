@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22021"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:54:12 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1ODsyMDIyLTExLTA0OzEwOjEyOjE4IEFNOzMzMDc="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1ODsyMDIyLTExLTA0OzEwOjU0OjEyIEFNOzQ7MzQxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="to print the modulus value by receiveing the values of divisor and divident&#13;&#10;"/>
+            <declare name="divisor, divident, quotient, remainder" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER THE VALUE FOR DIVISOR&quot;" newline="True"/>
+            <input variable="divisor"/>
+            <output expression="&quot;ENTER THE VALUE FOR DIVIDENT&quot;" newline="True"/>
+            <input variable="divident"/>
+            <comment text="Calculating the quotient using normal division method&#13;&#10;"/>
+            <assign variable="quotient" expression="divident/divisor"/>
+            <comment text="Calculating the remainder using the quotient"/>
+            <assign variable="remainder" expression="divident-(divisor*quotient)"/>
+            <output expression="&quot;THE REMAINDER VALUE IS&quot;&amp;remainder" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
