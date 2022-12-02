@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22021"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:46:05 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1ODsyMDIyLTEyLTAyOzEwOjE0OjUxIEFNOzMzMDU="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1ODsyMDIyLTEyLTAyOzEwOjQ2OjA1IEFNOzI7MzQxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&quot;Lets calculate the fibonacci series of the given number&quot;"/>
+            <declare name="n, f1, f2, f3, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the input for getting the fibonacci series&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="f2" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="f3" expression="1"/>
+            <output expression="&quot;The fibonacci series of &quot;&amp;n&amp; &quot; is=&quot;" newline="True"/>
+            <comment text="using while loop calculate  the fibonacci series"/>
+            <while expression="i&lt;=n">
+                <output expression="f3" newline="True"/>
+                <comment text="f1 gets the value of f2(0)"/>
+                <assign variable="f1" expression="f2"/>
+                <comment text="f2 gets the value of f3(1)"/>
+                <assign variable="f2" expression="f3"/>
+                <comment text="we add the values f1 and f2"/>
+                <assign variable="f3" expression="f1+f2"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
