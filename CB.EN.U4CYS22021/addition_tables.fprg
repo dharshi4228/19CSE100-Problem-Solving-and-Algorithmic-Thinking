@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22021"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:17:11 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1ODsyMDIyLTEyLTAyOzEwOjAyOjQ2IEFNOzMzMDY="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1ODsyMDIyLTEyLTAyOzEwOjE3OjExIEFNOzQ7MzQxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <for variable="a" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;The addition table of&quot; &amp;a&amp;&quot;is=&quot;" newline="True"/>
+                <for variable="b" start="1" end="10" direction="inc" step="1">
+                    <output expression="a&amp;&quot;+&quot;&amp;b&amp;&quot;=&quot;&amp;a+b" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
