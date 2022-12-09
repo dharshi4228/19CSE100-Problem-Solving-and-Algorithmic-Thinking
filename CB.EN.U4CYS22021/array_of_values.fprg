@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ADMIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:04:12 AM"/>
+        <attribute name="created" value="QURNSU47REVTS1RPUC04NjcwQ09HOzIwMjItMTItMDk7MDk6MTE6MDMgQU07MjYzNQ=="/>
+        <attribute name="edited" value="QURNSU47REVTS1RPUC04NjcwQ09HOzIwMjItMTItMDk7MTE6MDQ6MTIgQU07NDsyNzQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="TO STORE AN ARRAY OF VALUES IN ARRAY VARIABLE"/>
+            <declare name="array" type="Integer" array="True" size="10"/>
+            <declare name="inputs" type="Integer" array="False" size=""/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Enter an interger =&quot;" newline="True"/>
+                <input variable="inputs"/>
+                <assign variable="array[index]" expression="inputs"/>
+            </for>
+            <output expression="&quot;HERE IS AN ARRAY OF INPUTS&quot;" newline="True"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Array content [&quot;&amp;index&amp;&quot;]=&quot;&amp;array[index]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

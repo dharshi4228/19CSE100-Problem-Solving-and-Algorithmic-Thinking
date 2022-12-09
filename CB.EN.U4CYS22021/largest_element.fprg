@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ADMIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:06:28 AM"/>
+        <attribute name="created" value="QURNSU47REVTS1RPUC04NjcwQ09HOzIwMjItMTItMDk7MTA6MzM6MjUgQU07MjYzNQ=="/>
+        <attribute name="edited" value="QURNSU47REVTS1RPUC04NjcwQ09HOzIwMjItMTItMDk7MTE6MDY6MjggQU07NTsyNzUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="FIND THE LARGEST NUMBER AMONG THE GIVEN INPUTS"/>
+            <declare name="index, z, v" type="Integer" array="False" size=""/>
+            <declare name="x" type="Integer" array="True" size="5"/>
+            <comment text="USE FOR LOOP TO GET THE VALUES FROM USER"/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;ENTER THE NUMBER[&quot;&amp;Y&amp;&quot;]=&quot;" newline="True"/>
+                <input variable="z"/>
+                <assign variable="x[index]" expression="z"/>
+            </for>
+            <assign variable="v" expression="0"/>
+            <comment text="AGAIN USE FOR LOOP TO PRINT THE LARGEST NUMBER"/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <if expression="v&lt;x[index]">
+                    <then>
+                        <assign variable="v" expression="x[index]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;THE LARGEST ELEMENT IS&quot;&amp;v" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
