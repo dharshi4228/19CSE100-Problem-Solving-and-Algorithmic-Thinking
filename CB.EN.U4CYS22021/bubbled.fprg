@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22021"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:54:58 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1OTsyMDIzLTAxLTIwOzEwOjUxOjQxIEFNOzMzMDU="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1OTsyMDIzLTAxLTIwOzEwOjUzOjA4IEFNOzE7Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1OTsyMDIzLTAxLTIwOzEwOjQyOjE5IEFNO3NlbGVjdGlvbnNvcnQuZnByZzs4NzQ1"/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1OTsyMDIzLTAxLTIwOzEwOjU0OjA0IEFNOzM7Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1OTsyMDIzLTAxLTIwOzA5OjQzOjU1IEFNO2J1YmxlLmZwcmc7Nzg1Mw=="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1OTsyMDIzLTAxLTIwOzEwOjU0OjU4IEFNOzE7MzQyNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER THE NUMBER OF VALUE YOU WANT TO SORT&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="count, count1, placeholder, input" type="Integer" array="False" size=""/>
+            <declare name="userinput" type="Integer" array="True" size="n"/>
+            <assign variable="count" expression="0"/>
+            <assign variable="count1" expression="0"/>
+            <declare name="choice" type="String" array="False" size=""/>
+            <output expression="&quot;DO YOU WANT TO SORT IN ASCENDING OR DECENDING&quot;" newline="True"/>
+            <output expression="&quot;Enter a or d&quot;" newline="True"/>
+            <input variable="choice"/>
+            <if expression="choice=&quot;a&quot;">
+                <then>
+                    <for variable="count" start="0" end="n-1" direction="inc" step="1">
+                        <output expression="&quot;Enter the number&quot;" newline="True"/>
+                        <input variable="input"/>
+                        <assign variable="userinput[count]" expression="input"/>
+                    </for>
+                    <assign variable="count" expression="0"/>
+                    <for variable="count" start="0" end="n" direction="inc" step="1">
+                        <for variable="count1" start="0" end="n-1" direction="inc" step="1">
+                            <if expression="userinput[count]&gt;userinput[count1+1]">
+                                <then>
+                                    <assign variable="placeholder" expression="userinput[count1]"/>
+                                    <assign variable="userinput[count1]" expression="userinput[count1+1]"/>
+                                    <assign variable="userinput[count1+1]" expression="placeholder"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                    </for>
+                    <assign variable="count" expression="0"/>
+                    <for variable="count" start="0" end="n-1" direction="inc" step="1">
+                        <output expression="userinput[count]" newline="True"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="count" start="0" end="n-1" direction="inc" step="1">
+                        <output expression="&quot;Enter the number&quot;" newline="True"/>
+                        <input variable="input"/>
+                        <assign variable="userinput[count]" expression="input"/>
+                    </for>
+                    <assign variable="count" expression="0"/>
+                    <for variable="count" start="0" end="n" direction="inc" step="1">
+                        <for variable="count1" start="0" end="n-1" direction="inc" step="1">
+                            <if expression="userinput[count]&lt;userinput[count1+1]">
+                                <then>
+                                    <assign variable="placeholder" expression="userinput[count1]"/>
+                                    <assign variable="userinput[count1]" expression="userinput[count1+1]"/>
+                                    <assign variable="userinput[count1+1]" expression="placeholder"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                    </for>
+                    <assign variable="count" expression="0"/>
+                    <for variable="count" start="0" end="n-1" direction="inc" step="1">
+                        <output expression="userinput[count]" newline="True"/>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

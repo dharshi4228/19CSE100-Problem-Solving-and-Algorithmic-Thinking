@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22021"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:51:19 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1OTsyMDIzLTAxLTIwOzEwOjQyOjE5IEFNOzMzMTA="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1OTsyMDIzLTAxLTIwOzEwOjQ2OjQyIEFNOzM7Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1OTsyMDIzLTAxLTIwOzEwOjE3OjE3IEFNO3NlbGVjdDEuZnByZzs4MDE0"/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMTsyMDIyMjNNQVlDMDA1OTsyMDIzLTAxLTIwOzEwOjUxOjE5IEFNOzE7MzQxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER THE NUMBER OF VALUE YOU WANT TO SORT&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="i, j, min, a" type="Integer" array="False" size=""/>
+            <declare name="input" type="Integer" array="True" size="n"/>
+            <assign variable="i" expression="0"/>
+            <declare name="choice" type="String" array="False" size=""/>
+            <output expression="&quot;DO YOU WANT TO SORT IN ASCENDING OR DECENDING&quot;" newline="True"/>
+            <output expression="&quot;Enter a or d&quot;" newline="True"/>
+            <input variable="choice"/>
+            <if expression="choice=&quot;a&quot;">
+                <then>
+                    <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                        <output expression="&quot;Enter the numbers&quot;" newline="True"/>
+                        <input variable="input[i]"/>
+                    </for>
+                    <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                        <assign variable="min" expression="i"/>
+                        <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
+                            <if expression="input[j]&lt;input[min]">
+                                <then>
+                                    <assign variable="min" expression="j"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <assign variable="a" expression="input[i]"/>
+                        <assign variable="input[i]" expression="input[min]"/>
+                        <assign variable="input[min]" expression="a"/>
+                    </for>
+                    <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                        <output expression="input[i]" newline="True"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                        <output expression="&quot;Enter the numbers&quot;" newline="True"/>
+                        <input variable="input[i]"/>
+                    </for>
+                    <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                        <assign variable="min" expression="i"/>
+                        <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
+                            <if expression="input[j]&gt;input[min]">
+                                <then>
+                                    <assign variable="min" expression="j"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <assign variable="a" expression="input[i]"/>
+                        <assign variable="input[i]" expression="input[min]"/>
+                        <assign variable="input[min]" expression="a"/>
+                    </for>
+                    <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                        <output expression="input[i]" newline="True"/>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
