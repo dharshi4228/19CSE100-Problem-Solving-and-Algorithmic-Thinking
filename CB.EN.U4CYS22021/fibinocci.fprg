@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ADMIN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-06 10:45:20 PM"/>
+        <attribute name="created" value="QURNSU47REVTS1RPUC04NjcwQ09HOzIwMjMtMDEtMDU7MDg6MTU6NTYgUE07MjY1Ng=="/>
+        <attribute name="edited" value="QURNSU47REVTS1RPUC04NjcwQ09HOzIwMjMtMDEtMDY7MTA6NDU6MjAgUE07NjsyNzU3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER THE NUMBER TO GET ITS FIBINOCCI SERIES&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;The fibinocci series of &quot;&amp;n&amp;&quot; is&quot;" newline="True"/>
+            <output expression="compfibbo(n)" newline="True"/>
+        </body>
+    </function>
+    <function name="compfibbo" type="Integer" variable="f1">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="f1, f2, f3, i" type="Integer" array="False" size=""/>
+            <assign variable="f1" expression="0"/>
+            <assign variable="f2" expression="1"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;n-1">
+                <assign variable="f3" expression="f1+f2"/>
+                <output expression="f1" newline="True"/>
+                <assign variable="f1" expression="f2"/>
+                <assign variable="f2" expression="f3"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
